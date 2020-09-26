@@ -1,0 +1,60 @@
+.container {
+  width: 100%;
+  min-height: 100px;
+  padding: 20px;
+  margin-top: 50px;
+  border: 5px solid rgb(218, 217, 217);
+}
+
+.bio {
+  margin-bottom: 30px;
+}
+.bioText{
+  font-size: 24px;
+  font-weight:400;
+}
+.bio p {
+  font-size: 17px;
+  color: black;
+  margin-top: 5px;
+}
+.skills {
+  margin-bottom: 30px;
+}
+
+.skill{
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.links{
+    font-size: 24px;
+    font-weight: 400;
+}
+.skills ul li {
+  display: inline-block;
+  padding: 5px 15px;
+  margin-right: 20px;
+  background-color: #efefef;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.socialLinks {
+  margin-bottom: 30px;
+}
+.socialLinks ul li {
+  display: inline-block;
+  padding: 5px 15px;
+  margin-right: 20px;
+}
+.socialLinks ul li a {
+  color: #02075d;
+  font-weight: bold;
+  text-decoration: none;
+}
+.socialLinks ul li a:hover {
+  color: coral;
+}
