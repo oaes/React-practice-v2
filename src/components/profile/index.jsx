@@ -1,39 +1,25 @@
 import React from "react";
+import Bio from "./Bio";
 import "./profile.style.css";
+import Skill from "./Skill";
+import SocialLink from "./SocialLink";
 
 class Profile extends React.Component {
+  me ={
+    name:'akash',
+    title:'junior SE',
+    skillA:'javascript',
+    skillB:'ReactJs',
+    skillC:'Nodejs'
+  }
+
   render() {
+    
     return (
       <div className="container">
-        <div className="bio">
-          <h3 className='bioText'>Oaes kuruni</h3>
-          <p>Front-End Software Engineer</p>
-        </div>
-        <div className="skills">
-          <h3 className='skill'>Skills:</h3>
-          <ul>
-            <li>JavaScript</li>
-            <li>React Js</li>
-            <li>Node Js</li>
-          </ul>
-        </div>
-        <div className="socialLinks">
-          <h3 className='links'>Socials Link:</h3>
-          <ul>
-            <li>
-              <a href="facebook.com">Facebook</a>
-            </li>
-            <li>
-              <a href="linkedin.com">LinkedIn</a>
-            </li>
-            <li>
-              <a href="youtube.com">YouTube</a>
-            </li>
-            <li>
-              <a href="youtube.com">GitHub</a>
-            </li>
-          </ul>
-        </div>
+        <Bio name={this.me.name} title={this.me.title}/>
+        <Skill skillA={this.me.skillA} skillB={this.me.skillB} skillC={this.me.skillC}/>
+        <SocialLink />
       </div>
     );
   }
