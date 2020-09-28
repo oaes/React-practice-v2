@@ -28,3 +28,8 @@ code {
   border: 1px solid grey;
   color: #222222;
 }
+.textField{
+  width: 100%;
+  padding: 10px;
+  margin: 10 0;
+}
