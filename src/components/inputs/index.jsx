@@ -6,14 +6,22 @@ class Inputs extends React.Component {
     country: "",
     bio: "",
     birthday: "",
+    gender: "",
+    agree: false,
   };
   handleEvent = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
     });
   };
+
+  handleCheckBox = (event) => {
+    this.setState({
+      agree: event.target.checked,
+    });
+  };
   render() {
-    const { name, country, bio, birthday } = this.state;
+    const { name, country, bio, birthday, agree } = this.state;
     return (
       <div>
         <input
@@ -49,8 +57,46 @@ class Inputs extends React.Component {
           className="form-control"
           onChange={this.handleEvent}
         />
-        <button className='my-2' onClick={()=> console.log(this.state)}>
-            sent data
+        <div>
+          <input
+            className="ml-2"
+            type="radio"
+            name="gender"
+            value="Male"
+            onChange={this.handleEvent}
+          />
+          Male
+          <input
+            className="ml-2"
+            type="radio"
+            name="gender"
+            value="Female"
+            onChange={this.handleEvent}
+          />
+          Female
+          <input
+            className="ml-2"
+            type="radio"
+            name="gender"
+            value="Other"
+            onChange={this.handleEvent}
+          />
+          Other
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="agree"
+            checked={agree}
+            onChange={this.handleCheckBox}
+          />
+           I agree all the terms and conditions.
+        </div>
+        <button
+          className="my-2 btn-success"
+          onClick={() => console.log(this.state)}
+        >
+          sent data
         </button>
       </div>
     );
