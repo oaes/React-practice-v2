@@ -8,6 +8,7 @@ class Inputs extends React.Component {
     birthday: "",
     gender: "",
     agree: false,
+    skill: [],
   };
   handleEvent = (event) => {
     this.setState({
@@ -83,6 +84,49 @@ class Inputs extends React.Component {
           />
           Other
         </div>
+
+        <div>
+          <input
+            className="ml-2"
+            type="checkbox"
+            name="skills"
+            value="java"
+            onChange={this.handleSkill}
+          />
+          Java
+          <input
+            className="ml-2"
+            type="checkbox"
+            name="skills"
+            value="javaScript"
+            onChange={this.handleSkill}
+          />
+          JavaScript
+          <input
+            className="ml-2"
+            type="checkbox"
+            name="skills"
+            value="Golang"
+            onChange={this.handleSkill}
+          />
+          Golang
+          <input
+            className="ml-2"
+            type="checkbox"
+            name="skills"
+            value="C"
+            onChange={this.handleSkill}
+          />
+          C
+          <input
+            className="ml-2"
+            type="checkbox"
+            name="skills"
+            value="Python"
+            onChange={this.handleSkill}
+          />
+          Python
+        </div>
         <div>
           <input
             type="checkbox"
@@ -90,7 +134,7 @@ class Inputs extends React.Component {
             checked={agree}
             onChange={this.handleCheckBox}
           />
-           I agree all the terms and conditions.
+          I agree all the terms and conditions.
         </div>
         <button
           className="my-2 btn-success"
