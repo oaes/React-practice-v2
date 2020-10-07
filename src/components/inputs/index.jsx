@@ -8,7 +8,7 @@ class Inputs extends React.Component {
     birthday: "",
     gender: "",
     agree: false,
-    skill: [],
+    skills: [],
   };
   handleEvent = (event) => {
     this.setState({
@@ -21,8 +21,15 @@ class Inputs extends React.Component {
       agree: event.target.checked,
     });
   };
+  handleSkill = (event) => {
+    if (event.target.checked) {
+      this.setState({
+        skills: [...this.state.skills, event.target.value],
+      });
+    }
+  };
   render() {
-    const { name, country, bio, birthday, agree } = this.state;
+    const { name, country, bio, birthday, agree, skills } = this.state;
     return (
       <div>
         <input
@@ -91,6 +98,7 @@ class Inputs extends React.Component {
             type="checkbox"
             name="skills"
             value="java"
+            checked={skills.includes("java")}
             onChange={this.handleSkill}
           />
           Java
@@ -99,6 +107,7 @@ class Inputs extends React.Component {
             type="checkbox"
             name="skills"
             value="javaScript"
+            checked={skills.includes("javascript")}
             onChange={this.handleSkill}
           />
           JavaScript
@@ -107,6 +116,7 @@ class Inputs extends React.Component {
             type="checkbox"
             name="skills"
             value="Golang"
+            checked={skills.includes("golang")}
             onChange={this.handleSkill}
           />
           Golang
@@ -115,6 +125,7 @@ class Inputs extends React.Component {
             type="checkbox"
             name="skills"
             value="C"
+            checked={skills.includes("c")}
             onChange={this.handleSkill}
           />
           C
@@ -123,6 +134,7 @@ class Inputs extends React.Component {
             type="checkbox"
             name="skills"
             value="Python"
+            checked={skills.includes("python")}
             onChange={this.handleSkill}
           />
           Python
