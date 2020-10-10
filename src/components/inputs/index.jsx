@@ -30,7 +30,7 @@ class Inputs extends React.Component {
       const skills = this.state.skills.filter(
         (skill) => skill !== event.target.value
       );
-      this.setState(skills)
+      this.setState({ skills });
     }
   };
   render() {
