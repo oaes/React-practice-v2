@@ -1,13 +1,14 @@
 import React from "react";
-import Inputs from "./inputs";
+import FormUnconrolled from "./Form/FormUncontrolled";
+
 class App extends React.Component {
   
 
   render() {
     return (
       <div className="AppName">
-      <h4>Form compiling</h4>
-      <Inputs/>
+      <h4>Uncontrolled Form</h4>
+        <FormUnconrolled/>
       </div>
     );
   }
