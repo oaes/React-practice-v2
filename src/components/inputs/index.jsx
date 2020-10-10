@@ -26,6 +26,11 @@ class Inputs extends React.Component {
       this.setState({
         skills: [...this.state.skills, event.target.value],
       });
+    } else {
+      const skills = this.state.skills.filter(
+        (skill) => skill !== event.target.value
+      );
+      this.setState(skills)
     }
   };
   render() {
@@ -94,7 +99,7 @@ class Inputs extends React.Component {
 
         <div>
           <input
-            className="ml-2"
+            className="ml-3"
             type="checkbox"
             name="skills"
             value="java"
@@ -103,38 +108,38 @@ class Inputs extends React.Component {
           />
           Java
           <input
-            className="ml-2"
+            className="ml-3"
             type="checkbox"
             name="skills"
             value="javaScript"
-            checked={skills.includes("javascript")}
+            checked={skills.includes("javaScript")}
             onChange={this.handleSkill}
           />
           JavaScript
           <input
-            className="ml-2"
+            className="ml-3"
             type="checkbox"
             name="skills"
             value="Golang"
-            checked={skills.includes("golang")}
+            checked={skills.includes("Golang")}
             onChange={this.handleSkill}
           />
           Golang
           <input
-            className="ml-2"
+            className="ml-3"
             type="checkbox"
             name="skills"
             value="C"
-            checked={skills.includes("c")}
+            checked={skills.includes("C")}
             onChange={this.handleSkill}
           />
           C
           <input
-            className="ml-2"
+            className="ml-3"
             type="checkbox"
             name="skills"
             value="Python"
-            checked={skills.includes("python")}
+            checked={skills.includes("Python")}
             onChange={this.handleSkill}
           />
           Python
