@@ -1,14 +1,14 @@
 import React from "react";
-import FormUnconrolled from "./Form/FormUncontrolled";
+import FormUnconrol from "./Form/FormUncontrolled";
 
 class App extends React.Component {
-  
-
   render() {
     return (
       <div className="AppName">
-      <h4>Uncontrolled Form</h4>
-        <FormUnconrolled/>
+        <h4 style={{ color: "Green", fontSize: "30px", fontWeight: "900" }}>
+          Uncontrolled Form
+        </h4>
+        <FormUnconrol />
       </div>
     );
   }

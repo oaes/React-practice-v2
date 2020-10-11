@@ -1,6 +1,6 @@
 import React from "react";
 
-class FormUnconrolled extends React.Component {
+class FormUncontrol extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
     const data = {};
@@ -44,4 +44,4 @@ class FormUnconrolled extends React.Component {
     );
   }
 }
-export default FormUnconrolled;
+export default FormUncontrol;
